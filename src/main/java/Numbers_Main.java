@@ -20,10 +20,12 @@ public class Numbers_Main {
             Random rand = new Random();
             array[i]=rand.nextInt(100);
         }
+        
         Numbers num = new Numbers();
-        System.out.println("Total is: " + num.getTotal(array));
-        System.out.println("Average is: " + num.getAverage(array));
-        System.out.println("Highest is: " + num.getHighest(array));
-        System.out.println("Lowest is: " + num.getLowest(array));
+        num.setArray(array);
+        System.out.println("Total is: " + num.getTotal());
+        System.out.println("Average is: " + num.getAverage());
+        System.out.println("Highest is: " + num.getHighest());
+        System.out.println("Lowest is: " + num.getLowest());
     }
 }

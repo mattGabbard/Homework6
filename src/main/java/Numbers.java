@@ -10,42 +10,47 @@
  */
 public class Numbers {
  
-    private int[] array;
-    private int total=0;
-    private int highest;
-    private int lowest;
+    private int[] array; 
+    private int total = 0;
+    private int highest = 0;
+    private int lowest = 100;
     
-    public int getTotal(int[] array){
+    public void setArray(int[] array) {
+        
+        this.array = array;
+    }
+    
+    public int getTotal(){
     
         for (int i=0;i<array.length;++i){
-            total+=array[i];
+            total += array[i];
         }
         return total;
     }
     
-    public int getAverage(int[] array){
+    public int getAverage(){
     
         for (int i=0;i<array.length;++i){
-            total+=array[i];
+            total += array[i];
         }
         return total/array.length;
     }
     
-    public int getHighest(int[] array){
+    public int getHighest(){
     
         for (int i=0;i<array.length;++i){
             if (array[i]>highest) {
-                array[i]=highest;
+                highest = array[i];
             }   
         }
         return highest;
     }
     
-     public int getLowest(int[] array){
+     public int getLowest() {
     
         for (int i=0;i<array.length;++i){
             if (array[i]<lowest) {
-                array[i]=lowest;
+                lowest = array[i];
             }   
         }
         return lowest;
